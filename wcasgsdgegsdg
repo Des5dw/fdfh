@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "blox fruit virson hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "blox fruit virson hub", HidePremium = false, IntroText = "Skk Hub V2", SaveConfig = true, ConfigFolder = "OrionTest"})
 local RaceV4Tab = Window:MakeTab({
 	Name = "RaceV4",
 	Icon = "rbxassetid://4483345998",
