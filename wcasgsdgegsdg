@@ -1,0 +1,727 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "blox fruit virson hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local RaceV4Tab = Window:MakeTab({
+	Name = "RaceV4",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+OrionLib:MakeNotification({
+	Name = "Skk",
+	Content = "Made by skk",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+
+RaceV4Tab:AddButton({
+	Name = "MinkV4",
+	Callback = function()
+      		print("button pressed")
+require(game:GetService("ReplicatedStorage").Notification).new("Mink V4!"):Display();
+wait()
+setthreadcontext(5)
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Player = game:GetService("Players").LocalPlayer
+
+local ArgsTransform = {
+	Character = game.Players.LocalPlayer.Character,
+	CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+	Color1 = Color3.fromRGB(102, 255, 153),
+	Color2 = Color3.fromRGB(102, 255, 153),
+	Color3 = Color3.fromRGB(102, 255, 153),
+}
+
+Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
+
+delay(1, function()
+	pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform)
+	end)
+end)
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Player = game:GetService("Players").LocalPlayer
+
+local ArgsDash = {
+	Character = Player.Character,
+	Duration = 0.25,
+	CFrame = Player.Character.HumanoidRootPart.CFrame,
+}
+
+
+local old; old = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
+	if self.Name == "CommE" then
+		local args = {...}
+
+		if args[1] == "Dodge" then
+			coroutine.wrap(function() require(ReplicatedStorage.Effect.Container.Shared.LightningTP)(ArgsDash) end)()
+		end
+	end
+	
+	return old(self, ...)
+end))
+while true do
+	wait(0.3)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Player = game:GetService("Players").LocalPlayer
+local ArgsDash = {
+	Character = Player.Character,
+	Duration = 0.25,
+	CFrame = Player.Character.HumanoidRootPart.CFrame,
+}
+			coroutine.wrap(function() require(ReplicatedStorage.Effect.Container.Shared.LightningTP)(ArgsDash) end)()
+				end
+
+				
+  	end    
+})
+
+RaceV4Tab:AddButton({
+	Name = "FichmanV4",
+	Callback = function()
+		require(game:GetService("ReplicatedStorage").Notification).new("Fishman V4!"):Display();
+		wait()
+		setthreadcontext(5)
+		
+		local ReplicatedStorage = game:GetService("ReplicatedStorage")
+		
+		local Player = game:GetService("Players").LocalPlayer
+		
+		local ArgsTransform = {
+			Character = game.Players.LocalPlayer.Character,
+			CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+			Color1 = Color3.fromRGB(5, 115, 166),
+			Color2 = Color3.fromRGB(5, 115, 166),
+			Color3 = Color3.fromRGB(5, 115, 166),
+		}
+		
+		Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
+		
+		delay(1, function()
+			pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
+		end)
+		
+
+		
+  	end    
+})
+
+RaceV4Tab:AddButton({
+	Name = "SkypeianV4",
+	Callback = function()
+      		print("button pressed")
+			  game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+			require(game:GetService("ReplicatedStorage").Notification).new("Skypeian V4!"):Display();
+			  wait()
+			  setthreadcontext(5)
+			  
+			  local ReplicatedStorage = game:GetService("ReplicatedStorage")
+			  
+			  local Player = game:GetService("Players").LocalPlayer
+			  
+			  local ArgsTransform = {
+				  Character = game.Players.LocalPlayer.Character,
+				  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+				  Color1 = Color3.fromRGB(222, 222, 0),
+				  Color2 = Color3.fromRGB(222, 222, 0),
+				  Color3 = Color3.fromRGB(222, 222, 0),
+			  }
+			  
+			  Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
+			  
+			  delay(1, function()
+				  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
+			  end)
+			  repeat wait() 
+			  until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
+		  local mouse = game.Players.LocalPlayer:GetMouse() 
+		  repeat wait() until mouse
+		  local plr = game.Players.LocalPlayer 
+		  local torso = plr.Character.Head 
+		  local flying = false
+		  local deb = true 
+		  local ctrl = {f = 0, b = 0, l = 0, r = 0} 
+		  local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+		  local maxspeed = 400 
+		  local speed = 5000 
+		  
+		  function Fly() 
+		  local bg = Instance.new("BodyGyro", torso) 
+		  bg.P = 9e4 
+		  bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+		  bg.cframe = torso.CFrame 
+		  local bv = Instance.new("BodyVelocity", torso) 
+		  bv.velocity = Vector3.new(0,0.1,0) 
+		  bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
+		  repeat wait() 
+		  plr.Character.Humanoid.PlatformStand = true 
+		  if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
+		  speed = speed+0.5+(speed/maxspeed) 
+		  if speed > maxspeed then 
+		  speed = maxspeed 
+		  end 
+		  elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
+		  speed = speed-1 
+		  if speed < 0 then 
+		  speed = 0 
+		  end 
+		  end 
+		  if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
+		  bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*0.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+		  lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
+		  elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
+		  bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*0.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+		  else 
+		  bv.velocity = Vector3.new(0,0.1,0) 
+		  end 
+		  bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
+		  until not flying 
+		  ctrl = {f = 0, b = 0, l = 0, r = 0} 
+		  lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+		  speed = 0 
+		  bg:Destroy() 
+		  bv:Destroy() 
+		  plr.Character.Humanoid.PlatformStand = false 
+		  end 
+		  mouse.KeyDown:connect(function(key) 
+		  if key:lower() == "h" then 
+		  if flying then flying = false 
+		  else 
+		  flying = true 
+		  Fly() 
+		  end 
+		  elseif key:lower() == "w" then 
+		  ctrl.f = 1 
+		  elseif key:lower() == "s" then 
+		  ctrl.b = -1 
+		  elseif key:lower() == "a" then 
+		  ctrl.l = -1 
+		  elseif key:lower() == "d" then 
+		  ctrl.r = 1 
+		  end 
+		  end) 
+		  mouse.KeyUp:connect(function(key) 
+		  if key:lower() == "w" then 
+		  ctrl.f = 0 
+		  elseif key:lower() == "s" then 
+		  ctrl.b = 0 
+		  elseif key:lower() == "a" then 
+		  ctrl.l = 0 
+		  elseif key:lower() == "d" then 
+		  ctrl.r = 0 
+		  end 
+		  end)
+		  Fly()
+  	end    
+})
+
+RaceV4Tab:AddButton({
+	Name = "GhoulV4",
+	Callback = function()
+      		print("button pressed")
+			  require(game:GetService("ReplicatedStorage").Notification).new("Ghoul V4!"):Display();
+			  wait()
+			  setthreadcontext(5)
+			  
+			  local ReplicatedStorage = game:GetService("ReplicatedStorage")
+			  
+			  local Player = game:GetService("Players").LocalPlayer
+			  
+			  local ArgsTransform = {
+				  Character = game.Players.LocalPlayer.Character,
+				  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+				  Color1 = Color3.fromRGB(155, 155, 155),
+				  Color2 = Color3.fromRGB(0, 0, 0),
+				  Color3 = Color3.fromRGB(155, 155, 155),
+			  }
+			  
+			  Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
+			  
+			  delay(1, function()
+				  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
+			  end)
+  	end    
+})
+
+RaceV4Tab:AddButton({
+	Name = "CyborgV4",
+	Callback = function()
+      		print("button pressed")
+			  require(game:GetService("ReplicatedStorage").Notification).new("Cyborg V4!"):Display();
+			  wait()
+			  setthreadcontext(5)
+			  
+			  local ReplicatedStorage = game:GetService("ReplicatedStorage")
+			  
+			  local Player = game:GetService("Players").LocalPlayer
+			  
+			  local ArgsTransform = {
+				  Character = game.Players.LocalPlayer.Character,
+				  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+				  Color1 = Color3.fromRGB(166, 0, 111),
+				  Color2 = Color3.fromRGB(166, 0, 111),
+				  Color3 = Color3.fromRGB(166, 0, 111),
+			  }
+			  
+			  Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
+			  
+			  delay(1, function()
+				  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
+			  end)
+  	end    
+})
+
+RaceV4Tab:AddButton({
+	Name = "HumanV4",
+	Callback = function()
+		require(game:GetService("ReplicatedStorage").Notification).new("Human V4!"):Display();
+		wait()
+		setthreadcontext(5)
+		
+		local ReplicatedStorage = game:GetService("ReplicatedStorage")
+		
+		local Player = game:GetService("Players").LocalPlayer
+		
+		local ArgsTransform = {
+			Character = game.Players.LocalPlayer.Character,
+			CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+			Color1 = Color3.fromRGB(166, 0, 0),
+			Color2 = Color3.fromRGB(166, 0, 0),
+			Color3 = Color3.fromRGB(166, 0, 0),
+		}
+		
+		Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
+		
+		delay(1, function()
+			pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
+		end)
+		
+  	end    
+})
+
+RaceV4Tab:AddButton({
+	Name = "race ???",
+	Callback = function()
+		require(game:GetService("ReplicatedStorage").Notification).new("race ???!"):Display();
+		wait()
+		setthreadcontext(5)
+		
+		local ReplicatedStorage = game:GetService("ReplicatedStorage")
+		
+		local Player = game:GetService("Players").LocalPlayer
+		
+		local ArgsTransform = {
+			Character = game.Players.LocalPlayer.Character,
+			CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+			Color1 = Color3.fromRGB(0, 0, 0),
+			Color2 = Color3.fromRGB(166, 0, 0),
+			Color3 = Color3.fromRGB(0, 0, 0),
+		}
+		
+		Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
+		
+		delay(1, function()
+			pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
+		end)
+  	end    
+})
+
+RaceV4Tab:AddButton({
+	Name = "All race",
+	Callback = function()
+      		print("button pressed")
+			  require(game:GetService("ReplicatedStorage").Notification).new("Warning, it's lag!"):Display();
+			  wait()
+			  setthreadcontext(5)
+			  
+			  local ReplicatedStorage = game:GetService("ReplicatedStorage")
+			  
+			  local Player = game:GetService("Players").LocalPlayer
+			  
+			  local ArgsTransform = {
+				  Character = game.Players.LocalPlayer.Character,
+				  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+				  Color1 = Color3.fromRGB(166, 0, 0),
+				  Color2 = Color3.fromRGB(166, 0, 0),
+				  Color3 = Color3.fromRGB(166, 0, 0),
+			  }
+			  
+			  Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
+			  
+			  delay(1, function()
+				  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
+			  end)
+			  
+			  setthreadcontext(5)
+			  
+			  local ReplicatedStorage = game:GetService("ReplicatedStorage")
+			  
+			  local Player = game:GetService("Players").LocalPlayer
+			  
+			  local ArgsTransform = {
+				  Character = game.Players.LocalPlayer.Character,
+				  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+				  Color1 = Color3.fromRGB(166, 0, 111),
+				  Color2 = Color3.fromRGB(166, 0, 111),
+				  Color3 = Color3.fromRGB(166, 0, 111),
+			  }
+			  
+			  Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
+			  
+			  delay(1, function()
+				  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
+			  end)
+			  
+			  setthreadcontext(5)
+			  
+			  local ReplicatedStorage = game:GetService("ReplicatedStorage")
+			  
+			  local Player = game:GetService("Players").LocalPlayer
+			  
+			  local ArgsTransform = {
+				  Character = game.Players.LocalPlayer.Character,
+				  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+				  Color1 = Color3.fromRGB(155, 155, 155),
+				  Color2 = Color3.fromRGB(0, 0, 0),
+				  Color3 = Color3.fromRGB(155, 155, 155),
+			  }
+			  
+			  Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
+			  
+			  delay(1, function()
+				  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
+			  end)
+			  
+			  setthreadcontext(5)
+			  
+			  local ReplicatedStorage = game:GetService("ReplicatedStorage")
+			  
+			  local Player = game:GetService("Players").LocalPlayer
+			  
+			  local ArgsTransform = {
+				  Character = game.Players.LocalPlayer.Character,
+				  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+				  Color1 = Color3.fromRGB(222, 222, 0),
+				  Color2 = Color3.fromRGB(222, 222, 0),
+				  Color3 = Color3.fromRGB(222, 222, 0),
+			  }
+			  
+			  Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
+			  
+			  delay(1, function()
+				  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
+			  end)
+			  
+			  setthreadcontext(5)
+			  
+			  local ReplicatedStorage = game:GetService("ReplicatedStorage")
+			  
+			  local Player = game:GetService("Players").LocalPlayer
+			  
+			  local ArgsTransform = {
+				  Character = game.Players.LocalPlayer.Character,
+				  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+				  Color1 = Color3.fromRGB(5, 115, 166),
+				  Color2 = Color3.fromRGB(5, 115, 166),
+				  Color3 = Color3.fromRGB(5, 115, 166),
+			  }
+			  
+			  Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
+			  
+			  delay(1, function()
+				  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
+			  end)
+			  
+			  setthreadcontext(5)
+			  
+			  local ReplicatedStorage = game:GetService("ReplicatedStorage")
+			  
+			  local Player = game:GetService("Players").LocalPlayer
+			  
+			  local ArgsTransform = {
+				  Character = game.Players.LocalPlayer.Character,
+				  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+				  Color1 = Color3.fromRGB(102, 255, 153),
+				  Color2 = Color3.fromRGB(102, 255, 153),
+				  Color3 = Color3.fromRGB(102, 255, 153),
+			  }
+			  
+			  Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
+			  
+			  delay(1, function()
+				  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
+			  end)
+  	end    
+})
+
+local visionTab = Window:MakeTab({
+	Name = "vision",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+visionTab:AddButton({
+	Name = "green circle",
+	Callback = function()
+      		print("button pressed")
+			
+if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
+	local inf = Instance.new("ParticleEmitter")
+	inf.Acceleration = Vector3.new(0,0,0)
+	inf.Archivable = true
+	inf.Drag = 20
+	inf.EmissionDirection = Enum.NormalId.Top
+	inf.Enabled = true
+	inf.Lifetime = NumberRange.new(0.2,0.2)
+	inf.LightInfluence = 0
+	inf.LockedToPart = true
+	inf.Name = "Agility"
+	inf.Rate = 500
+	local numberKeypoints2 = {
+	NumberSequenceKeypoint.new(0, 0);
+	NumberSequenceKeypoint.new(1, 4);
+	}
+	inf.Size = NumberSequence.new(numberKeypoints2)
+	inf.RotSpeed = NumberRange.new(999, 9999)
+	inf.Rotation = NumberRange.new(0, 0)
+	inf.Speed = NumberRange.new(30, 30)
+	inf.SpreadAngle = Vector2.new(360,360)
+	inf.Texture = "rbxassetid://7157487174"
+	inf.VelocityInheritance = 0
+	inf.ZOffset = 2
+	inf.Transparency = NumberSequence.new(0)
+	inf.Color = ColorSequence.new(Color3.fromRGB(24,245,50),Color3.fromRGB(24,245,50))
+	inf.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+	end
+
+  	end    
+})
+
+visionTab:AddButton({
+	Name = "blue circle",
+	Callback = function()
+      		print("button pressed")
+			
+if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
+	local inf = Instance.new("ParticleEmitter")
+	inf.Acceleration = Vector3.new(0,0,0)
+	inf.Archivable = true
+	inf.Drag = 20
+	inf.EmissionDirection = Enum.NormalId.Top
+	inf.Enabled = true
+	inf.Lifetime = NumberRange.new(0.2,0.2)
+	inf.LightInfluence = 0
+	inf.LockedToPart = true
+	inf.Name = "Agility"
+	inf.Rate = 500
+	local numberKeypoints2 = {
+	NumberSequenceKeypoint.new(0, 0);
+	NumberSequenceKeypoint.new(1, 4);
+	}
+	inf.Size = NumberSequence.new(numberKeypoints2)
+	inf.RotSpeed = NumberRange.new(999, 9999)
+	inf.Rotation = NumberRange.new(0, 0)
+	inf.Speed = NumberRange.new(30, 30)
+	inf.SpreadAngle = Vector2.new(360,360)
+	inf.Texture = "rbxassetid://7157487174"
+	inf.VelocityInheritance = 0
+	inf.ZOffset = 2
+	inf.Transparency = NumberSequence.new(0)
+	inf.Color = ColorSequence.new(Color3.fromRGB(24,160,245),Color3.fromRGB(24,160,245))
+	inf.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+	end
+
+  	end    
+})
+
+visionTab:AddButton({
+	Name = "yellow circle",
+	Callback = function()
+      		print("button pressed")
+			
+if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
+	local inf = Instance.new("ParticleEmitter")
+	inf.Acceleration = Vector3.new(0,0,0)
+	inf.Archivable = true
+	inf.Drag = 20
+	inf.EmissionDirection = Enum.NormalId.Top
+	inf.Enabled = true
+	inf.Lifetime = NumberRange.new(0.2,0.2)
+	inf.LightInfluence = 0
+	inf.LockedToPart = true
+	inf.Name = "Agility"
+	inf.Rate = 500
+	local numberKeypoints2 = {
+	NumberSequenceKeypoint.new(0, 0);
+	NumberSequenceKeypoint.new(1, 4);
+	}
+	inf.Size = NumberSequence.new(numberKeypoints2)
+	inf.RotSpeed = NumberRange.new(999, 9999)
+	inf.Rotation = NumberRange.new(0, 0)
+	inf.Speed = NumberRange.new(30, 30)
+	inf.SpreadAngle = Vector2.new(360,360)
+	inf.Texture = "rbxassetid://7157487174"
+	inf.VelocityInheritance = 0
+	inf.ZOffset = 2
+	inf.Transparency = NumberSequence.new(0)
+	inf.Color = ColorSequence.new(Color3.fromRGB(234,245,24),Color3.fromRGB(234,245,24))
+	inf.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+	end
+
+  	end    
+})
+
+visionTab:AddButton({
+	Name = "black circle",
+	Callback = function()
+      		print("button pressed")
+			
+if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
+	local inf = Instance.new("ParticleEmitter")
+	inf.Acceleration = Vector3.new(0,0,0)
+	inf.Archivable = true
+	inf.Drag = 20
+	inf.EmissionDirection = Enum.NormalId.Top
+	inf.Enabled = true
+	inf.Lifetime = NumberRange.new(0.2,0.2)
+	inf.LightInfluence = 0
+	inf.LockedToPart = true
+	inf.Name = "Agility"
+	inf.Rate = 500
+	local numberKeypoints2 = {
+	NumberSequenceKeypoint.new(0, 0);
+	NumberSequenceKeypoint.new(1, 4);
+	}
+	inf.Size = NumberSequence.new(numberKeypoints2)
+	inf.RotSpeed = NumberRange.new(999, 9999)
+	inf.Rotation = NumberRange.new(0, 0)
+	inf.Speed = NumberRange.new(30, 30)
+	inf.SpreadAngle = Vector2.new(360,360)
+	inf.Texture = "rbxassetid://7157487174"
+	inf.VelocityInheritance = 0
+	inf.ZOffset = 2
+	inf.Transparency = NumberSequence.new(0)
+	inf.Color = ColorSequence.new(Color3.fromRGB(0,0,0),Color3.fromRGB(0,0,0))
+	inf.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+	end
+
+  	end    
+})
+
+visionTab:AddButton({
+	Name = "purple circle",
+	Callback = function()
+      		print("button pressed")
+			
+if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
+	local inf = Instance.new("ParticleEmitter")
+	inf.Acceleration = Vector3.new(0,0,0)
+	inf.Archivable = true
+	inf.Drag = 20
+	inf.EmissionDirection = Enum.NormalId.Top
+	inf.Enabled = true
+	inf.Lifetime = NumberRange.new(0.2,0.2)
+	inf.LightInfluence = 0
+	inf.LockedToPart = true
+	inf.Name = "Agility"
+	inf.Rate = 500
+	local numberKeypoints2 = {
+	NumberSequenceKeypoint.new(0, 0);
+	NumberSequenceKeypoint.new(1, 4);
+	}
+	inf.Size = NumberSequence.new(numberKeypoints2)
+	inf.RotSpeed = NumberRange.new(999, 9999)
+	inf.Rotation = NumberRange.new(0, 0)
+	inf.Speed = NumberRange.new(30, 30)
+	inf.SpreadAngle = Vector2.new(360,360)
+	inf.Texture = "rbxassetid://7157487174"
+	inf.VelocityInheritance = 0
+	inf.ZOffset = 2
+	inf.Transparency = NumberSequence.new(0)
+	inf.Color = ColorSequence.new(Color3.fromRGB(6,66,161),Color3.fromRGB(6,66,161))
+	inf.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+	end
+
+  	end    
+})
+
+visionTab:AddButton({
+	Name = "red circle",
+	Callback = function()
+      		print("button pressed")
+			
+if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
+	local inf = Instance.new("ParticleEmitter")
+	inf.Acceleration = Vector3.new(0,0,0)
+	inf.Archivable = true
+	inf.Drag = 20
+	inf.EmissionDirection = Enum.NormalId.Top
+	inf.Enabled = true
+	inf.Lifetime = NumberRange.new(0.2,0.2)
+	inf.LightInfluence = 0
+	inf.LockedToPart = true
+	inf.Name = "Agility"
+	inf.Rate = 500
+	local numberKeypoints2 = {
+	NumberSequenceKeypoint.new(0, 0);
+	NumberSequenceKeypoint.new(1, 4);
+	}
+	inf.Size = NumberSequence.new(numberKeypoints2)
+	inf.RotSpeed = NumberRange.new(999, 9999)
+	inf.Rotation = NumberRange.new(0, 0)
+	inf.Speed = NumberRange.new(30, 30)
+	inf.SpreadAngle = Vector2.new(360,360)
+	inf.Texture = "rbxassetid://7157487174"
+	inf.VelocityInheritance = 0
+	inf.ZOffset = 2
+	inf.Transparency = NumberSequence.new(0)
+	inf.Color = ColorSequence.new(Color3.fromRGB(166,12,12),Color3.fromRGB(166,12,12))
+	inf.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+	end
+
+  	end    
+})
+
+
+
+
+
+visionTab:AddButton({
+	Name = "Destroy circle",
+	Callback = function()
+      		print("button pressed")
+			  if game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
+				game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility"):Destroy()
+				end
+				
+  	end    
+})
+
+
+
+local CreditTab = Window:MakeTab({
+	Name = "Credit",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+CreditTab:AddParagraph("blox fruit virson hub","Project Skk Created")
+
+local Section = CreditTab:AddSection({
+	Name = "Last updated 2023/1/20"
+})
+
+CreditTab:AddButton({
+	Name = "Destroying the Interface",
+	Callback = function()
+      		print("button pressed")
+              OrionLib:Destroy()
+  	end    
+})
+
+OrionLib:Init()
